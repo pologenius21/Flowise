@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>PhantomChat</title>
+
+  <!-- Prevent caching -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Prevent indexing -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- QR Code library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- ═══ SIDEBAR ═══ -->
+    <div id="sidebar">
+      <div id="sidebar-header">
+        <h1>PhantomChat</h1>
+        <div id="my-anon-id">Initializing...</div>
+      </div>
+      <div id="sidebar-actions">
+        <button class="btn btn-primary" id="add-contact-btn">+ ADD CONTACT</button>
+      </div>
+      <div id="contacts-list"></div>
+    </div>
+
+    <!-- ═══ MAIN CHAT AREA ═══ -->
+    <div id="main">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+
+  <!-- ═══ PANIC BUTTON ═══ -->
+  <button id="panic-btn" title="PANIC — Wipe everything">&#9888;</button>
+
+  <!-- ═══ TOAST NOTIFICATIONS ═══ -->
+  <div id="toast-container"></div>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script src="crypto.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
